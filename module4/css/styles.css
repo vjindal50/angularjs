@@ -1,5 +1,6 @@
 body {
   font-size: 1.2em;
+  background: #776622;
 }
 
 .error {
@@ -29,5 +30,5 @@ font-size:20px;
 div.content{margin:20px;}
 
 button {
-  background-color: green;
+  background: green;
 }
