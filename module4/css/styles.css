@@ -1,6 +1,8 @@
 body {
-  font-size: 1.2em;
-  background: #776622;
+  font-size: 16px;
+  color: #fff;
+  background-color: #61122f;
+  font-family: 'Oxygen', sans-serif;
 }
 
 .error {
