@@ -1,6 +1,6 @@
 body {
   font-size: 16px;
-  color: #fff;
+  color: black;
   background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
 }
@@ -32,5 +32,5 @@ font-size:20px;
 div.content{margin:20px;}
 
 button {
-  background: green;
+  background-color: : green;
 }
