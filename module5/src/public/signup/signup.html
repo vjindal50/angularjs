@@ -1,0 +1,61 @@
+<div class="row">
+  <h1 class="text-center">Sign UP for our NewsLetter </h1>
+   <div class="col-md-5 col-xs-offset-1" >
+   <form name="userForm" novalidate > 
+    <div class="form-group">
+      <label>First Name: </label>
+      <input class="form-control" type="text" ng-model="signCtrl.user.firtsName" name="firstname"   required  >
+      <div class="error" ng-if="userForm.firstname.$error.required && userForm.firstname.$touched">
+      Fist name is required    </div>
+      
+    </div>
+     <div class="form-group">
+      <label>Last Name: </label>
+      <input class="form-control" type="text" name="lastname"  ng-model="signCtrl.user.lastName" required >
+      <div class="error" ng-if="userForm.lastname.$error.required && userForm.lastname.$touched">
+      Last name is required    </div>
+    </div>
+     <div class="form-group">
+      <label>Email: </label>
+      <input class="form-control" type="email" ng-model="signCtrl.user.email"  name="email" required>
+      <div class="error" ng-if=" (userForm.email.$invalid || userForm.email.$error.required)  && userForm.email.$touched">
+      Please provide your email in correct format   </div>
+      </div>
+    
+     <div class="form-group">
+      <label>Phone Number : </label>
+      <input class="form-control" type="phone" name="phone" ng-model="signCtrl.user.phone"  placeholder="Phone ###-###-####"  pattern="(\d{3})-(\d{3})-(\d{4})" required >
+      <div class="error" ng-if=" (userForm.phone.$invalid || userForm.phone.$error.required)  && userForm.phone.$touched">
+      Please provide your phone in form : ###-###-####  </div>
+      </div>
+      
+    
+     <div class="form-group">
+      <label>Your Favorite dish: </label> {{signfCtrl.favDish}}
+      <input class="form-control" type="text" name="fav" ng-model="signCtrl.user.favDish" placeholder="short name  [A....][1....]" required>
+      <div class="error" ng-if="userForm.fav.$error.required && userForm.fav.$touched">
+      Your Favorite dish is required    </div>
+      <div class="error" ng-if="signCtrl.itemError">
+       No such menu number exists   </div>
+     
+      
+    </div>
+
+   
+    <div class="form-group">
+      <button class="btn btn-primary" ng-click="signCtrl.doSignup();" ng-disabled="userForm.$invalid" > Sign UP </button>
+    </div>
+    </form>
+  </div>
+  
+   <div class="col-md-5  bg-info text-success" ng-if="signCtrl.okSign" >
+   <h3 class="text-danger">  Congratulations  ,  Your information has been saved !!!!!! </h3>
+ <strong>   Your Favorite item is : </strong> 
+<p> </p>
+
+ <menu-item  menu-item="signCtrl.itemd" >
+  </menu-item>
+  
+   </div>
+  
+</div>
